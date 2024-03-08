@@ -1,0 +1,18 @@
+
+import java.util.Scanner;
+
+public class FromOneToParameter {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int time = Integer.valueOf(scanner.nextLine());
+        printUntilNumber(time);
+    }
+
+    public static void printUntilNumber(int time) {
+        for (int i = 1; i <= time; i++) {
+            System.out.println(i);
+        }
+
+    }
+}
