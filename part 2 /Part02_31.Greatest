@@ -1,0 +1,28 @@
+
+public class Greatest {
+
+    public static int greatest(int number1, int number2, int number3) {
+        int result = number1;
+        if (number1 > number2) {
+            if (number1 > number3) {
+                result = number1;
+            } else {
+                result = number3;
+            }
+        } else {
+            if (number2 > number3) {
+                result = number2;
+            } else {
+                result = number3;
+            }
+
+        }
+
+        return result;
+    }
+
+    public static void main(String[] args) {
+        int result = greatest(-5, -8, -4);
+        System.out.println("Greatest: " + result);
+    }
+}
