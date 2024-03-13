@@ -1,0 +1,10 @@
+
+public class YourFirstAccount {
+
+    public static void main(String[] args) {
+        Account first = new Account("J account", 100.0);
+        first.deposit(20);
+        
+        System.out.println(first);
+    }
+}
