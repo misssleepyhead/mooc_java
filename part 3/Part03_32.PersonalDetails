@@ -1,0 +1,36 @@
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class PersonalDetails {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        //int namelength = 0;
+        String name = "";
+        int year = 0;
+        int amount = 0;
+        int count = 0; 
+        while (true) {
+            String input = scanner.nextLine();
+            if (input.equals("")) {
+                break;
+            }
+
+            String[] parts = input.split(",");
+            count ++; 
+            //amount = parts.length;
+            for (int i = 0; i <= amount; i++) {
+                if (name.length() < parts[0].length()) {
+                    name = parts[0];
+                }
+            }
+            year += Integer.valueOf(parts[1]);
+        }
+        System.out.println("Longest name: " + name);
+//        System.out.println("year" + year);
+//        System.out.println("amount" + count);
+        double avg = (1.0 * year) / count;
+        System.out.println("Average of the birth years: " + avg);
+    }
+}
