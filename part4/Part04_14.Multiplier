@@ -1,0 +1,12 @@
+public class Multiplier {
+
+    private int multiply;
+
+    public Multiplier(int number) {
+        this.multiply = number;
+    }
+     public int multiply(int number){
+     return this.multiply*number;
+     
+     }
+}
