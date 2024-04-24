@@ -25,7 +25,7 @@ public class MagicSquareFactory {
                 row = rowHelper + 1;
                 column = colHelper;
             }
-            square.placeValue(row, column, i);
+            //square.placeValue(row, column, i);
         }
         return square;
     }
