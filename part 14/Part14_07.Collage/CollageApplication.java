@@ -28,7 +28,7 @@ public class CollageApplication extends Application {
 
         WritableImage targetImage = new WritableImage(width, height);
         PixelWriter imageWriter = targetImage.getPixelWriter();
-        PixelWriter imageWriter2 = targetImage.getPixelWriter();
+
 
         int yCoordinate = 0;
         while (yCoordinate < height) {
@@ -48,21 +48,18 @@ public class CollageApplication extends Application {
                 imageWriter.setColor(xCoordinate / 2, yCoordinate / 2 + height / 2, newColor);
                 imageWriter.setColor(xCoordinate / 2 + width / 2, yCoordinate / 2 + height / 2, newColor);
 
-                xCoordinate++;
+                xCoordinate+=2;
             }
 
-            yCoordinate++;
+            yCoordinate+=2;
         }
 
         ImageView image = new ImageView(targetImage);
-//        ImageView image2 = new ImageView(targetImage);
-//        image2.setScaleX(0.25);
-//        image2.setScaleY(0.25);
-//        image2.setTranslateX(-width/4);
+
 
         Pane pane = new Pane();
         pane.getChildren().add(image);
-        // pane.getChildren().add(image2);
+
 
         stage.setScene(new Scene(pane));
         stage.show();
